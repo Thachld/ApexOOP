@@ -4,6 +4,7 @@ public class Basic implements IType{
         collection.add('Configuration');
         collection.add('License');
 
+        System.debug('Basic:IType => ' + collection);
         return collection;
     }   
 }

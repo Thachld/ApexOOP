@@ -6,6 +6,7 @@ public class Advance implements IType{
         collection.add('Coding');
         collection.add('Sytem Helth Care');
 
+        System.debug('Advance:IType => ' + collection);
         return collection;
     }  
 }
