@@ -1,5 +1,5 @@
-public class GoldSupport implements ISuportFactory{
-    public ITime getTimeSuport(){
+public class GoldSupport extends SuportFactory{
+    public override ITime getTimeSuport(){
         return new GoldSLA();
     }
     
