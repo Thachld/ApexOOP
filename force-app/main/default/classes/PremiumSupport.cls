@@ -1,13 +1,15 @@
-public class PremiumSupport implements ISuportFactory{
-    public ITime getTimeSuport(){
-        return new PremiumSLA();
+public class PremiumSupport implements ISuportFactory{   
+
+    public ITime getTimeSuport(){        
+        return SLAFactory.createInstance('PremiumSLA');
     }
     
     public IPriority getPriority(){
-        return new High();
+        
+        return PriorityFactory.createInstance('High');
     }
    
-    public IType getTypeSupport(){
-        return new Advance();
+    public IType getTypeSupport(){        
+        return TypeFactory.createInstance('Advance');
     }
 }

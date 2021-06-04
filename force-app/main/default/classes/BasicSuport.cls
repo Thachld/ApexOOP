@@ -1,13 +1,15 @@
-public  class BasicSuport implements ISuportFactory{
-    public ITime getTimeSuport(){
-        return new SLABasic();
+public  class BasicSuport implements ISuportFactory{  
+
+    public ITime getTimeSuport(){        
+        return SLAFactory.createInstance('SLABasic');
     }
     
     public IPriority getPriority(){
-        return new Low();
+        
+        return PriorityFactory.createInstance('Low');
     }
    
-    public IType getTypeSupport(){
-        return new Basic();
+    public IType getTypeSupport(){        
+        return TypeFactory.createInstance('Basic');
     }
 }

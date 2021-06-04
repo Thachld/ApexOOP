@@ -1,13 +1,17 @@
-public class GoldSupport extends SuportFactory{
-    public override ITime getTimeSuport(){
-        return new GoldSLA();
+public class GoldSupport implements ISuportFactory{   
+    
+    public ITime getTimeSuport(){        
+        return SLAFactory.createInstance('GoldSLA');
     }
     
     public IPriority getPriority(){
-        return new Medium();
+        
+        return PriorityFactory.createInstance('Medium');
     }
    
-    public IType getTypeSupport(){
-        return new Basic();
+    public IType getTypeSupport(){        
+        return TypeFactory.createInstance('Basic');
     }
+
+
 }
